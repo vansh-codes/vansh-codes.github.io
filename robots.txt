@@ -1,15 +1,8 @@
 User-agent: *
-
-# Allow access to content
 Allow: /
-
-# Block access to any js-specific files
+Allow: /assets/
 Disallow: /*.js$
 Disallow: /*.json$
-
-# Block access to development or build-specific directories
 Disallow: /static/
 Disallow: /build/
-
-# Specify the location of your XML sitemap
 Sitemap: https://vanshchaurasiya.me/sitemap.xml
