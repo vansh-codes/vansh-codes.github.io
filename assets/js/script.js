@@ -190,3 +190,20 @@ form1.addEventListener('submit', function(e) {
             }, 3000);
         });
 });
+
+const images = document.querySelectorAll(".data-tooltip img");
+
+images.forEach((img) => {
+  const tooltip = img.nextElementSibling;
+  tooltip.textContent = img.getAttribute("data-title");
+
+  img.addEventListener("mouseover", function () {
+    tooltip.style.opacity = "1";
+    tooltip.style.visibility = "visible";
+  });
+
+  img.addEventListener("mouseout", function () {
+    tooltip.style.opacity = "0";
+    tooltip.style.visibility = "hidden";
+  });
+});
